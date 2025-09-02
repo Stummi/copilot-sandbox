@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Demo Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Demo Site</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#demo">Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Hello World!</h1>
+            <p>Welcome to this simple static webpage demonstration.</p>
+            <button id="welcome-btn" class="btn-primary">Click Me!</button>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About This Page</h2>
+            <p>This is a demonstration of a simple static webpage created with HTML, CSS, and JavaScript.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>HTML Structure</h3>
+                    <p>Clean, semantic HTML5 markup with proper accessibility features.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>CSS Styling</h3>
+                    <p>Modern CSS with responsive design and attractive visual elements.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>JavaScript Interactivity</h3>
+                    <p>Dynamic content and user interaction powered by vanilla JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="content-section">
+            <h2>Interactive Demo</h2>
+            <div class="demo-container">
+                <div class="counter-demo">
+                    <h3>Counter Demo</h3>
+                    <p>Current count: <span id="counter">0</span></p>
+                    <button id="increment-btn" class="btn-secondary">Increment</button>
+                    <button id="decrement-btn" class="btn-secondary">Decrement</button>
+                    <button id="reset-btn" class="btn-secondary">Reset</button>
+                </div>
+                
+                <div class="color-demo">
+                    <h3>Color Changer</h3>
+                    <div id="color-box" class="color-display"></div>
+                    <button id="change-color-btn" class="btn-secondary">Change Color</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Demo Static Website. Created with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
