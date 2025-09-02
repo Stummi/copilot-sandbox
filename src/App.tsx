@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Counter from './components/Counter';
 import ColorChanger from './components/ColorChanger';
 import WelcomeSection from './components/WelcomeSection';
+import SnakeGame from './components/SnakeGame';
 
 // Type definitions for the app
 export interface AppProps {}
@@ -62,6 +63,7 @@ const App: React.FC<AppProps> = () => {
           <div className="demo-container">
             <Counter />
             <ColorChanger />
+            <SnakeGame />
           </div>
         </section>
       </main>
