@@ -1,0 +1,184 @@
+.snake-game {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.snake-game h3 {
+  color: #22c55e;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+  margin-bottom: 1rem;
+}
+
+.game-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.score-value {
+  font-weight: bold;
+  color: #22c55e;
+  font-size: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.game-controls {
+  font-size: 0.85rem !important;
+  color: #94a3b8 !important;
+  font-style: italic;
+}
+
+.game-container {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 2px solid #374151;
+}
+
+.game-canvas {
+  display: block;
+  background: #2a2a2a;
+  image-rendering: pixelated; /* For sharp pixel art */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.game-over-content {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: gameOverAppear 0.3s ease-out;
+}
+
+.game-over-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-over-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.game-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Override btn-secondary styles to match the dark theme */
+.snake-game .btn-secondary {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin: 0.25rem;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.snake-game .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+  filter: brightness(1.1);
+}
+
+.snake-game .btn-secondary:active {
+  transform: translateY(0);
+}
+
+.snake-game .btn-secondary:disabled {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.snake-game .btn-secondary:disabled:hover {
+  transform: none;
+  filter: none;
+}
+
+/* Animation for game over screen */
+@keyframes gameOverAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .snake-game {
+    padding: 1.5rem 1rem;
+  }
+  
+  .game-container {
+    margin: 0.8rem 0;
+  }
+  
+  .game-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .snake-game h3 {
+    font-size: 1.2rem;
+  }
+  
+  .game-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .snake-game .btn-secondary {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .game-canvas {
+    width: 280px;
+    height: 280px;
+  }
+}
